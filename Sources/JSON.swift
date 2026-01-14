@@ -26,7 +26,7 @@ public enum JSON {
 
 // MARK: - Errors
 
-extension JSON: Sendable {
+extension JSON {
     /// An enum to encapsulate errors that may arise in working with `JSON`.
     public enum Error: Swift.Error {
         /// The `index` is out of bounds for a JSON array

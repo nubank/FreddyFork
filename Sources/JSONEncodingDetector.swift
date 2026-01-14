@@ -7,10 +7,10 @@
 //
 
 /// Struct for attempting to detect the Unicode encoding used with the data supplied to the JSONParser
-public struct JSONEncodingDetector: Sendable {
+public struct JSONEncodingDetector {
 
     //// The Unicode encodings looked for during detection
-    public enum Encoding: Sendable {
+    public enum Encoding {
         //// UTF-8
         case utf8
         //// UTF-16 Little Endian
