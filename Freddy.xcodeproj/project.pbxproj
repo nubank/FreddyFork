@@ -782,7 +782,7 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -796,7 +796,7 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
