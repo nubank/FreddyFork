@@ -753,7 +753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF811C23617500D77BF1 /* Framework.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -767,7 +767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF811C23617500D77BF1 /* Framework.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
