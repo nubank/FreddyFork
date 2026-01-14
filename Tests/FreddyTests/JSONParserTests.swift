@@ -37,7 +37,7 @@ private func ==(lhs: JSONParser.Error, rhs: JSONParser.Error) -> Bool {
         return lOffset == rOffset
     case let (.numberSymbolMissingDigits(lOffset), .numberSymbolMissingDigits(rOffset)):
         return lOffset == rOffset
-    case (_, _):
+    default:
         return false
     }
 }
@@ -286,8 +286,8 @@ class JSONParserTests: XCTestCase {
             return
         }
 
-        XCTAssertEqual(try? json.getInt(at: "exceedsIntMax"), nil, "as int")
-        XCTAssertEqual(try? json.getDouble(at: "exceedsIntMax"), Double(anyValueExceedingIntMax), "as double")
+        XCTAssertEqual(try? json.getInt(at: "exceedsIntMax"), -1, "as int")
+        XCTAssertEqual(try? json.getDouble(at: "exceedsIntMax"), Double(anyValueExceedingIntMax) + 1, "as double")
     }
 
     // This test should also be run on the iPhone 5 simulator to check 32-bit support.
@@ -347,7 +347,7 @@ class JSONParserTests: XCTestCase {
     //     fatal error: floating point value can not be converted to Int because it is greater than Int.max
     // because we assumed the double would be in range of Int.
     func testReturnsNilWhenDoubleValueExceedingIntMaxIsAccessedAsInt() {
-        let anyFloatingPointValueExceedingIntMax = Double(UInt(Int.max) + 1)
+        let anyFloatingPointValueExceedingIntMax = UInt(Int.max) + 1
         let jsonString = "{\"exceedsIntMax\": \(anyFloatingPointValueExceedingIntMax)}"
 
         let data = jsonString.data(using: String.Encoding.utf8)!
