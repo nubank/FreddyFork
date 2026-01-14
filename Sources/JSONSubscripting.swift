@@ -12,7 +12,7 @@
 ///
 /// A custom type, such as a `RawRepresentable` enum, may be made to conform to `JSONPathType`
 /// and used with the subscript APIs.
-public protocol JSONPathType {
+public protocol JSONPathType: Sendable {
     /// Use `self` to key into a `dictionary`.
     ///
     /// Unlike Swift dictionaries, failing to find a value for a key should throw
@@ -237,7 +237,7 @@ extension JSON {
     /// An `OptionSet` used to represent the different options available for subscripting `JSON` with `null` values or missing keys.
     /// * `.nullBecomesNil` - Treat `null` values as `nil`.
     /// * `.missingKeyBecomesNil` - Treat missing keys as `nil`.
-    public struct SubscriptingOptions: OptionSet {
+    public struct SubscriptingOptions: OptionSet, Sendable {
         public let rawValue: Int
         public init(rawValue: Int) {
             self.rawValue = rawValue

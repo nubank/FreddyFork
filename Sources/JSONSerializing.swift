@@ -7,7 +7,7 @@ import Foundation
 /// An `OptionSet` used to represent the different options available for serializing `JSON` with `null` values.
 /// * `.nullSkipsKey` - Skip keys with `null` values so the key is not included
 /// in the serialized json
-public struct SerializeOptions: OptionSet {
+public struct SerializeOptions: OptionSet, Sendable {
     public let rawValue: Int
     public init(rawValue: Int) {
         self.rawValue = rawValue
